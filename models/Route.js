@@ -2,12 +2,21 @@
 
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('Route', {
+    routeId: {
+      type: DataTypes.INTEGER(10),
+      allowNull: false,
+      primaryKey: true
+    },
+    routeName: {
+      type: DataTypes.STRING(128),
+      allowNull: true
+    },
     from_long: {
-      type: DataTypes.STRING(64),
+      type: DataTypes.FLOAT(0),
       allowNull: true
     },
     to_alt: {
-      type: DataTypes.STRING(64),
+      type: DataTypes.FLOAT(0),
       allowNull: true
     },
     days: {
@@ -25,7 +34,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     groupId: {
       type: DataTypes.INTEGER(10),
-      allowNull: false,
+      allowNull: true,
       references: {
         model: 'DriverGroup',
         key: 'groupId'
@@ -53,14 +62,15 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     from_alt: {
-      type: DataTypes.STRING(64),
+      type: DataTypes.FLOAT(0),
       allowNull: true
     },
     to_long: {
-      type: DataTypes.STRING(64),
+      type: DataTypes.FLOAT(64),
       allowNull: true
     }
   }, {
-    tableName: 'Route'
+    tableName: 'Route',
+    timestamps:false
   });
 };

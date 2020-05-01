@@ -34,6 +34,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true
     }
   }, {
-    tableName: 'Car'
+    tableName: 'Car',
+    timestamps:false
   });
 };

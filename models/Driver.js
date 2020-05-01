@@ -41,7 +41,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     created_at: {
       type: DataTypes.DATEONLY,
-      allowNull: true
+      allowNull: true,
+      defaultValue: sequelize.fn('current_timestamp')
     }
   }, {
     tableName: 'Driver',
