@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "root",
+    "password": "",
+    "database": "cs_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": null
+  },
+  "test": {
+     "username": "root",
+    "password": "",
+    "database": "cs_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": null
+  },
+  "production": {
+    "username": "root",
+    "password": "",
+    "database": "cs_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": null
+  }
+}
